@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="bloccontact__form border">
-            <?= get_sub_field('form'); ?>
+            <?= do_shortcode('[contact-form-7 id="118" title="Formulaire de contact 1"]'); ?>
         </div>
     </div>
 </section>

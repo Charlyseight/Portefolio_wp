@@ -225,7 +225,7 @@ class WP_Automatic_Updater {
 		 * was already notified of the same new version, WordPress won't repeatedly
 		 * email the administrator.
 		 *
-		 * This filter is also used on template-about.php to check if a plugin has disabled
+		 * This filter is also used on about.php to check if a plugin has disabled
 		 * these notifications.
 		 *
 		 * @since 3.7.0
@@ -637,7 +637,7 @@ class WP_Automatic_Updater {
 				// Can only reference the About screen if their update was successful.
 				list( $about_version ) = explode( '-', $core_update->current, 2 );
 				$body .= sprintf( __( "For more on version %s, see the About WordPress screen:" ), $about_version );
-				$body .= "\n" . admin_url( 'template-about.php' );
+				$body .= "\n" . admin_url( 'about.php' );
 
 				if ( $newer_version_available ) {
 					$body .= "\n\n" . sprintf( __( 'WordPress %s is also now available.' ), $next_user_core_update->current ) . ' ';

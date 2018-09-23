@@ -1,0 +1,865 @@
+@import "./partials/normalize";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/opensansregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans EBold';
+  src: url("../fonts/opensansextrabold.woff") format("woff") ;
+
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans SBold';
+  src: url("../fonts/opensanssemibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'italianno';
+  src: url("../fonts/italianno.woff") format("woff");
+}
+
+body{
+  font-family: $font;
+  font-weight: 400;
+  font-size: 65.2%;
+  max-width: 100%;
+}
+.hidden{
+  position: absolute;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.meta{
+  display: none;
+}
+///////////////////////////////////////////////////////////ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+.header{
+  background: url("../images/portefolio__banner.jpg") 70% 25% no-repeat;
+  background-size: cover;
+  padding-bottom: 60em;
+  width: 100%;
+  position: relative;
+}
+
+.flex__logo__link{
+  display: block;
+  width: 70px;
+  height: 70px;
+  //margin: 3em 0 0 3em;
+  padding: 3em 0 0 3em;
+}
+
+.link__logo{
+  width: 100%;
+  height: auto;
+}
+
+.header__title{
+  width: 50%;
+}
+
+.blocheader__flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blocheader__menu__list{
+  display: flex;
+  margin-right: 3em;
+}
+
+.menu__items__link{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  margin: 0 1em;
+  padding: 1.5em;
+}
+
+.header__name{
+  display: block;
+  font-size: 4em;
+  color:white;
+  font-family: $fontlight;
+  text-transform: uppercase;
+  position:absolute;
+  bottom: 350px;
+  left: 10%;
+
+}
+.header__job{
+  font-size: 3em;
+  color:white;
+  letter-spacing: 2px;
+  font-family: $fontbold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 420px;
+  left: 18%;
+}
+.menu__items .active{
+  border-bottom: 2px solid white;
+  padding-bottom: 1em;
+}
+
+.blocheader__menu__desk{
+  background: url("../images/menu_white.svg") no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 3em 4em 0em 0em;
+  display: none;
+}
+
+///////////////////////////////////////////////////////END_ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////ABOUT // WHO AM I ? /////////////////////////////////////////////////////////////////
+.blocme{
+  margin : 15em 0%;
+  text-align: center;
+}
+
+.strong{
+  font-family: $fontboldsemi;
+  color: dimgrey;
+}
+.blocme__title1{
+  text-transform: uppercase;
+  font-family: $fontbold;
+  font-size: 2.5em;
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+.blocme__chapo{
+  font-family: $scriptfont;
+  font-size: 3.8em;
+  text-align: center;
+  margin-bottom: 1.3em;
+}
+.blocme__text{
+  font-size: 1.8em;
+  line-height: 2;
+  color: dimgrey;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto 1.5em;
+  font-family: $fontlight ;
+}
+.blocme__button{
+  @include button;
+  background-color: dimgrey;
+  color: white;
+  display: inline-block;
+  margin: 2em 0em 0em 0em;
+}
+.blocme__button:hover{
+  background-color: black;
+}
+
+///////////////////////////////////////////////////////////END_ABOUT // WHO AM I ? ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+.blocresume{
+  margin : $margin;
+  margin-top: 0em;
+  text-align: center;
+  padding-top: 0em;
+}
+
+.blocresume__title1{
+  font-size: 3vw;
+  width: 100%;
+  font-family: $fontlight;
+  letter-spacing: 1px;
+}
+
+.blocresume__content__resume{
+  @include button;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 5em 0 0 0;
+}
+
+.blocresume__content__resume:hover{
+  background-color: dimgrey;
+}
+
+.blocresume__content__img{
+  width: 90%;
+  height: auto;
+}
+
+
+///////////////////////////////////////////////////////END_ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // HOBBIES/////////////////////////////////////////////////////////////////////
+.blochobbies{
+  background-color: $grey;
+}
+
+.blochobbies__margin{
+  margin : $margin;
+  display: flex;
+  justify-content: space-between;
+  padding: 8em 0;
+}
+.aboutme__title1{
+  font-size: 2.5vw;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  padding-bottom: 0.5em;
+}
+.aboutme__title1--typochange{
+  font-family: $scriptfont;
+  text-transform: lowercase;
+  font-size: 2em;
+}
+.aboutme__text{
+  width: 60%;
+  line-height: $lineheigh;
+  color: dimgrey;
+  font-size: 1.5em;
+  font-family: $fontlight;
+}
+.blochobbies__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-left: 1px solid lightgray;
+  padding-left: 18%;
+  width: 926px;
+}
+.blochobbies__list__items{
+  margin: 0 0 3em 2.5em;
+}
+.item__img{
+  width: 80px;
+  height: 80px;
+}
+/////////////////////////////////////////////////////END_ABOUT // HOBBIES/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // SKILLS/////////////////////////////////////////////////////////////////////
+.container_range{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.label_range{
+  font-size: 1.8em;
+  margin-bottom: .8em;
+}
+
+.skillsrange {
+  text-align: right;
+  padding: 10px;
+  color: white;
+}
+
+.htmlrange
+{
+  width: 80%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+.cssrange
+{
+  width: 75%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+.jsrange
+{
+  width: 55%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+.phprange
+{
+  width: 55%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+.adoberange
+{
+  width: 70%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+.wprange
+{
+  width: 80%;
+  background-color: #000000;
+  margin-bottom: 1.5em;
+}
+
+.blocskills{
+  background : linear-gradient(to right, $grey 12.8028125%, white 12.8028125%);
+}
+.blocskills__content{
+  margin: $margin;
+  padding: 15em 0 15em 3em;
+}
+
+.blocskills__content__title1{
+  text-transform: uppercase;
+  font-size: 4em;
+  letter-spacing: 2px;
+  margin-bottom: 0.8em;
+  font-weight: 800;
+}
+
+.blocskills__content__title1--typochange{
+  font-family: $scriptfont;
+  text-transform: initial;
+  font-size: 1.5em;
+}
+.blocskills__content__text{
+  color: dimgrey;
+  font-family: $fontlight ;
+  font-size: 1.8em;
+  line-height: $lineheigh;
+  margin-bottom: 2em;
+}
+
+.text__adjectif{
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 1em;
+  position: relative;
+  padding-left: 2.5em;
+}
+
+.text__adjectif:before{
+  content: "";
+  border-bottom: 1px solid lightgrey;
+  width: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+}
+
+.blocskills__icon{
+  margin-top: 5em;
+}
+
+.blocskills__icon__list{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+
+.skillslist__item__img{
+  width: 50%;
+  height: auto;
+  margin: 2em 0em 2em 0;
+}
+
+.text__catch{
+  font-size: 1.8em;
+  color: dimgrey;
+  font-family: $fontlight;
+  margin-top: 2em;
+  line-height: $lineheigh;
+}
+
+.blocskills__content__button{
+  @include button;
+  background-color: dimgrey;
+  color: white;
+  display: inline-block;
+  margin-top: 4em;
+}
+
+.blocskills__content__button:hover{
+  background-color: black;
+}
+
+////////////////////////////////////////////////////END_ABOUT // SKILLS/////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////WORK // HEADER /////////////////////////////////////////////////////////////
+
+.blocother__menu__link{
+  color: black;
+}
+
+.blocworks__header, .bloccontact__header{
+  background: none;
+}
+
+.list .active{
+  border-bottom: 2px solid black;
+  padding-bottom: 1em;
+}
+
+.works__title, .contact__title{
+  font-size: 18vw;
+  width: 100%;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0.5em 0 .8em 0;
+}
+
+.js .blocworks__menu__desk,.js .bloccontact__menu__desk{
+  background: url("../images/menu.svg") no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 3em 4em 0em 0em;
+  display: none;
+}
+
+.burgercss{
+  display: none;
+}
+.no-js #buttonjs{
+  visibility: hidden;
+}
+#burger{
+  visibility: hidden;
+}
+
+////////////////////////////////////////////////////////////////END_WORK // HEADER /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////WORK // LIST /////////////////////////////////////////////////////////////
+.flex_worklist{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-work{
+margin: 0 $margin;
+}
+
+.scdimg-single-work{
+  display: block;
+  margin: 8em auto;
+}
+
+.thdimg-single-work{
+  float: right;
+  margin-right: 15em;
+  margin-bottom: 2em;
+}
+
+.link-single-work{
+  margin-left: 9em;
+  margin-top: 2em;
+  display: inline-block;
+  @include button;
+  background-color: dimgrey;
+  color: white;
+}
+
+.link-single-work:hover{
+  background-color: black;
+}
+
+.img_work_page{
+  transition: 0.4s;
+  display: block;
+}
+
+.img_single_work{
+  display: block;
+  width: 100%;
+}
+
+.para-single-work, .content-single-work{
+  color: dimgray;
+  font-size: 1.8em;
+  line-height: 1.8;
+  font-family: $fontlight;
+  margin: 2em 8em;
+}
+
+.content-single-work{
+  margin-top: 4em;
+}
+
+.name_single_work{
+  font-size: 5em;
+  font-family: $fontlight;
+}
+
+/*.button-page-work{
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translate3d(-50%,-0%,0);
+  color: black;
+  width: 60%;
+  border : 1px solid black;
+  padding: .6em .8em;
+  border-radius: 50px;
+  //display: inline-block;
+}*/
+
+.taxo{
+  margin:.8em .8em 3em 0;
+  display: inline-block;
+  font-size: 1.5em;
+  //border : 1px solid lightgray;
+  color: dimgray;
+  //padding: .5em;
+  //border-radius: 20%;
+
+  font-family: $fontlight;
+}
+.name__worklist{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  font-size: 2em;
+  color: black;
+  opacity: 0;
+  transition: .4s;
+}
+
+.list_item_work:hover .name__worklist{
+  opacity: 1;
+}
+.list_item_work{
+  display: inline-block;
+  position: relative;
+  margin: 2em;
+}
+
+.list_item_work:hover .img_work_page{
+  background-color: white;
+  opacity: .1;
+
+}
+////////////////////////////////////////////////////////////END_WORK // LIST /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////INSTA // ABOUT /////////////////////////////////////////////////////////////
+.blocinsta{
+  margin: $margin;
+  margin-top: 0em;
+}
+.blocinsta__title1{
+  font-family: $scriptfont;
+  font-size: 5vw;
+  text-align: right;
+  width: 100%;
+}
+
+.blocinsta__title1--typochange{
+  font-family: $font;
+  text-transform: uppercase;
+  font-size: 0.4em;
+  letter-spacing: 2px;
+  padding: 0 0 1em 0.3em;
+  border-bottom: 0.3px solid lightgray;
+}
+
+.blocinsta__button{
+  @include button;
+  background-color: dimgrey;
+  display: inline-block;
+  color: white;
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+.blocinsta__button:hover{
+  background-color: black;
+}
+
+.blocinsta__images{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 4em;
+}
+
+.blocinsta__img{
+  width: 30%;
+  height: 30%;
+}
+
+////////////////////////////////////////////////////////////END_INSTA // ABOUT /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////CONTACT /////////////////////////////////////////////////////////////
+.wpcf7-response-output, .wpcf7-validation-errors{
+  visibility: hidden;
+}
+
+.wpcf7-not-valid-tip{
+  display: block;
+}
+
+.wpcf7-form-control-wrap{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.wpcf7-not-valid-tip{
+  color: red;
+  font-size: 1.2em;
+  margin-bottom: .8em;
+  margin-top: .5em;
+}
+.screen-reader-response ul li{
+  visibility: hidden;
+}
+
+.wpcf7-mail-sent-ok{
+  visibility: visible;
+  font-size: 1.2em;
+  color: rgb(26, 148,49);
+  text-transform: uppercase;
+  margin-top: 2em;
+  font-family: $fontboldsemi;
+}
+
+.screen-reader-response{
+  /*font-size: 1em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  line-height: 1.5;*/
+  visibility: hidden;
+}
+
+.contact__div{
+  display: flex;
+  justify-content: space-between;
+  margin: 20em 13%;
+}
+
+.bloccontact__form__flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.bloccontact__title1{
+  font-size: 6em;
+  font-family: $scriptfont;
+  margin-bottom: 0.5em;
+}
+
+.info{
+  width: 350px;
+  font-size: 2em;
+  color: dimgrey;
+  margin-bottom: 1.5em;
+}
+
+.bloccontact__network{
+  display: flex;
+
+}
+
+.social{
+  font-size: 3em;
+  color: black;
+  margin: 1em 5%;
+}
+
+.bloccontact__form__flex, .input, .wpcf7-form-control, .wpcf7-text, .wpcf7-validates-as-required, .bloccontact__form__flex .bloccontact__form--textarea{
+  margin-top: 1.3em;
+  padding-top: 0.8em;
+  padding-bottom: .8em;
+  padding-left: 2%;
+  width: 320px;
+}
+
+.info_send{
+  font-size: 1.5em;
+  line-height: 1.8;
+  font-family: $fontboldsemi;
+  margin-bottom: 2em;
+  position: relative;
+  top: 170px;
+  left: 928px;
+  width: 350px;
+
+}
+
+label, .label{
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-bottom: 0.5em;
+}
+
+.bloccontact__form--inputsubmit, .wpcf7-submit{
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 0.5em 2em;
+  font-weight: 100;
+  font-size: 1.6em;
+  margin: 1em auto;
+  display: block;
+  width: 50%;
+}
+
+.bloccontact__form--inputsubmit:hover, .wpcf7-submit:hover{
+  background-color: dimgrey;
+  color: white;
+}
+
+.border{
+  border-left: 1px solid lightgrey;
+  padding-left: 18%;
+}
+
+.bloccontact__picture__img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.no-js blockquote{
+  display: none;
+}
+
+.bloccontact__blockquote{
+  text-align: center;
+  position: relative;
+  padding-bottom: 10em;
+
+}
+
+.bloccontact__blockquote__item{
+  font-size: 5vw;
+  font-weight: 400;
+  color: dimgrey;
+  display: inline;
+}
+
+.txt-rotate{
+  color: black;
+}
+
+.bloccontact__blockquote__link{
+  @include button;
+  background-color: black;
+  color: white;
+  display: block;
+  width: 77px;
+  margin: 8em auto 0em;
+}
+
+.bloccontact__blockquote__link:hover{
+  background-color: dimgrey;
+}
+
+.errors ul li p{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: $font;
+  color: red;
+  margin-bottom: .5em;
+}
+
+.fa-exclamation{
+  color: red;
+  margin-right: .3em;
+}
+
+.return{
+  @include button;
+  background-color: black;
+  color: white;
+}
+
+.envoye__div{
+  margin: 0 $margin;
+  text-align: center;
+}
+.envoye__div p{
+  font-size: 4em;
+  color: black;
+  font-family: $scriptfont;
+  margin: 4em 0;
+}
+
+
+
+///////////////////////////////////////////////////////////////END_CONTACT ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////FOOTER ///////////////////////////////////////////////////////////////
+.blocfooter{
+  border-top: 1px solid lightgray;
+  padding-top: 10em;
+  text-align: center;
+  clear: right;
+}
+
+.blocfooter__logo__img{
+  display: block;
+  margin: 0 auto 8em;
+  width: 70px;
+  height: 70px;
+
+}
+
+.blocfooter__info{
+  display: flex;
+  justify-content: center;
+  margin: 4em;
+
+}
+
+.blocfooter__info__content{
+  font-size: 1.5vw;
+  margin: 0 3em;
+
+}
+
+.blocfooter__network{
+  text-align: center;
+}
+
+.blocfooter__network__content{
+  color: black;
+  font-size: 3em;
+  display: inline-block;
+  margin: 1.2em;
+}
+
+small{
+  display: block;
+  margin-bottom: 6em;
+}
+
+.bloccontact__copyright{
+  text-align: center;
+}
+
+.bloccontact__info--none{
+  display: none;
+}
+
+.article--link{
+  text-decoration: none;
+  color: initial;
+}
+
+/*.article:hover{
+    transform: scale(1.05);
+    z-index: 2;
+    transition: all 400ms ease-in;
+}*/
+
+.checkbox:focus ~ .burgercss>span{
+  background-color: red;
+}
+///////////////////////////////////////////////////////////END_FOOTER ///////////////////////////////////////////////////////////////
+
+@import "./partials/responsive";
